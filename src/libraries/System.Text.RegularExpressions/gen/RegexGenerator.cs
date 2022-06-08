@@ -48,10 +48,11 @@ namespace System.Text.RegularExpressions.Generator
             // - (RegexMethod regexMethod, string runnerFactoryImplementation, Dictionary<string, string[]> requiredHelpers) in the case of valid regex
             // - (RegexMethod regexMethod, string reason, Diagnostic diagnostic) in the case of a limited-support regex
             IncrementalValueProvider<ImmutableArray<object>> codeOrDiagnostics =
-                context.SyntaxProvider
-
-                // Find all MethodDeclarationSyntax nodes attributed with RegexGenerator and gather the required information.
-                .CreateSyntaxProvider(IsSyntaxTargetForGeneration, GetSemanticTargetForGeneration)
+                context
+                .ForAttributeWithMetadataName(
+                    RegexName,
+                    IsSyntaxTargetForGeneration,
+                    GetSemanticTargetForGeneration)
                 .Where(static m => m is not null)
 
                 // Generate the RunnerFactory for each regex, if possible.  This is where the bulk of the implementation occurs.

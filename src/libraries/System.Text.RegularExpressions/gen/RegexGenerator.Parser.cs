@@ -22,36 +22,14 @@ namespace System.Text.RegularExpressions.Generator
         private const string RegexGeneratorAttributeName = "System.Text.RegularExpressions.RegexGeneratorAttribute";
 
         private static bool IsSyntaxTargetForGeneration(SyntaxNode node, CancellationToken cancellationToken) =>
-            // We don't have a semantic model here, so the best we can do is say whether there are any attributes.
-            node is MethodDeclarationSyntax { AttributeLists: { Count: > 0 } };
-
-        private static bool IsSemanticTargetForGeneration(SemanticModel semanticModel, MethodDeclarationSyntax methodDeclarationSyntax, CancellationToken cancellationToken)
-        {
-            foreach (AttributeListSyntax attributeListSyntax in methodDeclarationSyntax.AttributeLists)
-            {
-                foreach (AttributeSyntax attributeSyntax in attributeListSyntax.Attributes)
-                {
-                    if (semanticModel.GetSymbolInfo(attributeSyntax, cancellationToken).Symbol is IMethodSymbol attributeSymbol &&
-                        attributeSymbol.ContainingType.ToDisplayString() == RegexGeneratorAttributeName)
-                    {
-                        return true;
-                    }
-                }
-            }
-
-            return false;
-        }
+            node is MethodDeclarationSyntax;
 
         // Returns null if nothing to do, Diagnostic if there's an error to report, or RegexType if the type was analyzed successfully.
-        private static object? GetSemanticTargetForGeneration(GeneratorSyntaxContext context, CancellationToken cancellationToken)
+        private static object? GetSemanticTargetForGeneration(GeneratorAttributeSyntaxContext context, CancellationToken cancellationToken)
         {
-            var methodSyntax = (MethodDeclarationSyntax)context.Node;
+            Debug.Assert(!context.Attributes.IsDefaultOrEmpty);
+            var methodSyntax = (MethodDeclarationSyntax)context.TargetNode;
             SemanticModel sm = context.SemanticModel;
-
-            if (!IsSemanticTargetForGeneration(sm, methodSyntax, cancellationToken))
-            {
-                return null;
-            }
 
             Compilation compilation = sm.Compilation;
             INamedTypeSymbol? regexSymbol = compilation.GetBestTypeByMetadataName(RegexName);
@@ -69,14 +47,8 @@ namespace System.Text.RegularExpressions.Generator
                 return null;
             }
 
-            IMethodSymbol? regexMethodSymbol = sm.GetDeclaredSymbol(methodSyntax, cancellationToken) as IMethodSymbol;
+            IMethodSymbol? regexMethodSymbol = context.TargetSymbol as IMethodSymbol;
             if (regexMethodSymbol is null)
-            {
-                return null;
-            }
-
-            ImmutableArray<AttributeData>? boundAttributes = regexMethodSymbol.GetAttributes();
-            if (boundAttributes is null || boundAttributes.Value.Length == 0)
             {
                 return null;
             }
@@ -85,7 +57,7 @@ namespace System.Text.RegularExpressions.Generator
             string? pattern = null;
             int? options = null;
             int? matchTimeout = null;
-            foreach (AttributeData attributeData in boundAttributes)
+            foreach (AttributeData attributeData in context.Attributes)
             {
                 if (!SymbolEqualityComparer.Default.Equals(attributeData.AttributeClass, regexGeneratorAttributeSymbol))
                 {
