@@ -24,9 +24,11 @@ namespace System.Text.Json.SourceGeneration
     {
         public void Initialize(IncrementalGeneratorInitializationContext context)
         {
-            IncrementalValuesProvider<ClassDeclarationSyntax> classDeclarations = context.SyntaxProvider
-                .CreateSyntaxProvider(static (s, _) => Parser.IsSyntaxTargetForGeneration(s), static (s, c) => Parser.GetSemanticTargetForGeneration(s, c))
-                .Where(static c => c is not null);
+            IncrementalValuesProvider<ClassDeclarationSyntax> classDeclarations = context
+                .ForAttributeWithMetadataName(
+                    Parser.JsonSerializableAttributeFullName,
+                    static (c, _) => Parser.IsSyntaxTargetForGeneration(c),
+                    static (c, _) => (ClassDeclarationSyntax)c.TargetNode);
 
             IncrementalValueProvider<(Compilation, ImmutableArray<ClassDeclarationSyntax>)> compilationAndClasses =
                 context.CompilationProvider.Combine(classDeclarations.Collect());
