@@ -8,5 +8,6 @@ if ($version -eq "") {
 }
 
 $packageVersion="8.1.0.0-$version"
-& .\dotnet.cmd pack src\libraries\System.Reflection.Metadata\src -c Release -p:ServicingVersion=1 -p:PackageVersion=$packageVersion
-& .\dotnet.cmd pack src\libraries\System.Collections.Immutable\src -c Release -p:ServicingVersion=1 -p:PackageVersion=$packageVersion
+& .\dotnet.cmd pack src\libraries\System.Reflection.Metadata\src -c Release -p:ServicingVersion=1 -p:PackageVersion=$packageVersion -p:ApiCompatGenerateSuppressionFile=true
+& .\dotnet.cmd pack src\libraries\System.Collections.Immutable\src -c Release -p:ServicingVersion=1 -p:PackageVersion=$packageVersion -p:ApiCompatGenerateSuppressionFile=true
+

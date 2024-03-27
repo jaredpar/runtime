@@ -91,6 +91,9 @@ namespace System.Reflection.PortableExecutable
             return null;
         }
 
+        protected virtual BlobBuilder CreateBlobBuilder(int? minimumSize = null) =>
+            minimumSize is { } size ? new BlobBuilder(size) : new BlobBuilder();
+
         protected override ImmutableArray<Section> CreateSections()
         {
             var builder = ImmutableArray.CreateBuilder<Section>(3);
@@ -120,8 +123,8 @@ namespace System.Reflection.PortableExecutable
 
         private BlobBuilder SerializeTextSection(SectionLocation location)
         {
-            var sectionBuilder = new BlobBuilder();
-            var metadataBuilder = new BlobBuilder();
+            var sectionBuilder = CreateBlobBuilder();
+            var metadataBuilder = CreateBlobBuilder();
 
             var metadataSizes = _metadataRootBuilder.Sizes;
 
@@ -144,7 +147,7 @@ namespace System.Reflection.PortableExecutable
             if (_debugDirectoryBuilderOpt != null)
             {
                 int debugDirectoryOffset = textSection.ComputeOffsetToDebugDirectory();
-                debugTableBuilderOpt = new BlobBuilder(_debugDirectoryBuilderOpt.TableSize);
+                debugTableBuilderOpt = CreateBlobBuilder(_debugDirectoryBuilderOpt.TableSize);
                 _debugDirectoryBuilderOpt.Serialize(debugTableBuilderOpt, location, debugDirectoryOffset);
 
                 // Only the size of the fixed part of the debug table goes here.
@@ -186,7 +189,7 @@ namespace System.Reflection.PortableExecutable
         {
             Debug.Assert(_nativeResourcesOpt != null);
 
-            var sectionBuilder = new BlobBuilder();
+            var sectionBuilder = CreateBlobBuilder();
             _nativeResourcesOpt.Serialize(sectionBuilder, location);
 
             _peDirectoriesBuilder.ResourceTable = new DirectoryEntry(location.RelativeVirtualAddress, sectionBuilder.Count);
@@ -195,7 +198,7 @@ namespace System.Reflection.PortableExecutable
 
         private BlobBuilder SerializeRelocationSection(SectionLocation location)
         {
-            var sectionBuilder = new BlobBuilder();
+            var sectionBuilder = CreateBlobBuilder();
             WriteRelocationSection(sectionBuilder, Header.Machine, _lazyEntryPointAddress);
 
             _peDirectoriesBuilder.BaseRelocationTable = new DirectoryEntry(location.RelativeVirtualAddress, sectionBuilder.Count);

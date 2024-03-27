@@ -26,6 +26,12 @@ namespace System.Reflection.PortableExecutable
             _dataBuilder = new BlobBuilder();
         }
 
+        public DebugDirectoryBuilder(BlobBuilder blobBuilder)
+        {
+            _entries = new List<Entry>(3);
+            _dataBuilder = blobBuilder;
+        }
+
         internal void AddEntry(DebugDirectoryEntryType type, uint version, uint stamp, int dataSize)
         {
             _entries.Add(new Entry()

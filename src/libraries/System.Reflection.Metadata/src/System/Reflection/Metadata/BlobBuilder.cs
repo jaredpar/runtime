@@ -39,7 +39,7 @@ namespace System.Reflection.Metadata
         // and the current length of the buffer (not that the buffers are swapped when suffix linking).
         private int _previousLengthOrFrozenSuffixLengthDelta;
 
-        private byte[] _buffer;
+        protected byte[] _buffer;
 
         // The length of data in the buffer in lower 31 bits.
         // Head: highest bit is 0, length may be 0.
@@ -60,7 +60,26 @@ namespace System.Reflection.Metadata
             }
 
             _nextOrPrevious = this;
-            _buffer = new byte[Math.Max(MinChunkSize, capacity)];
+            _buffer = new byte[(Math.Max(MinChunkSize, capacity))];
+        }
+
+        protected BlobBuilder(byte[] buffer)
+        {
+            if (buffer is null)
+            {
+                Throw.ArgumentNull(nameof(buffer));
+            }
+
+            _nextOrPrevious = this;
+            _buffer = buffer;
+        }
+
+        protected virtual void BeforeSwapCore(BlobBuilder other) { }
+
+        private static void BeforeSwap(BlobBuilder left, BlobBuilder right)
+        {
+            left.BeforeSwapCore(right);
+            right.BeforeSwapCore(left);
         }
 
         protected virtual BlobBuilder AllocateChunk(int minimalSize)
@@ -399,6 +418,7 @@ namespace System.Reflection.Metadata
                 return;
             }
 
+            BeforeSwap(this, prefix);
             PreviousLength += prefix.Count;
 
             // prefix is not a head anymore:
@@ -458,6 +478,8 @@ namespace System.Reflection.Metadata
             {
                 return;
             }
+
+            BeforeSwap(this, suffix);
 
             bool isEmpty = Count == 0;
 
@@ -537,6 +559,7 @@ namespace System.Reflection.Metadata
                 throw new InvalidOperationException(SR.Format(SR.ReturnedBuilderSizeTooSmall, GetType(), nameof(AllocateChunk)));
             }
 
+            BeforeSwap(this, newChunk);
             var newBuffer = newChunk._buffer;
 
             if (_length == 0)
