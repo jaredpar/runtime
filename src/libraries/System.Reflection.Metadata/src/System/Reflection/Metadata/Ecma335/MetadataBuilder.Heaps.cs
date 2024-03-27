@@ -10,30 +10,10 @@ namespace System.Reflection.Metadata.Ecma335
 {
     public sealed partial class MetadataBuilder
     {
-        private sealed class HeapBlobBuilder : BlobBuilder
-        {
-            private int _capacityExpansion;
-
-            public HeapBlobBuilder(int capacity)
-                : base(capacity)
-            {
-            }
-
-            protected override BlobBuilder AllocateChunk(int minimalSize)
-            {
-                return new HeapBlobBuilder(Math.Max(Math.Max(minimalSize, ChunkCapacity), _capacityExpansion));
-            }
-
-            internal void SetCapacity(int capacity)
-            {
-                _capacityExpansion = Math.Max(0, capacity - Count - FreeBytes);
-            }
-        }
-
         // #US heap
         private const int UserStringHeapSizeLimit = 0x01000000;
         private readonly Dictionary<string, UserStringHandle> _userStrings = new Dictionary<string, UserStringHandle>(256);
-        private readonly HeapBlobBuilder _userStringBuilder = new HeapBlobBuilder(4 * 1024);
+        private readonly BlobBuilder _userStringBuilder;
         private readonly int _userStringHeapStartOffset;
 
         // #String heap
@@ -48,7 +28,9 @@ namespace System.Reflection.Metadata.Ecma335
 
         // #GUID heap
         private readonly Dictionary<Guid, GuidHandle> _guids = new Dictionary<Guid, GuidHandle>();
-        private readonly HeapBlobBuilder _guidBuilder = new HeapBlobBuilder(16); // full metadata has just a single guid
+        private readonly BlobBuilder _guidBuilder;
+
+        private readonly Func<int, BlobBuilder> _createBlobBuilderFunc;
 
         /// <summary>
         /// Creates a builder for metadata tables and heaps.
@@ -77,6 +59,42 @@ namespace System.Reflection.Metadata.Ecma335
             int stringHeapStartOffset = 0,
             int blobHeapStartOffset = 0,
             int guidHeapStartOffset = 0)
+            : this(userStringHeapStartOffset, stringHeapStartOffset, blobHeapStartOffset, guidHeapStartOffset, null)
+        {
+
+        }
+
+        /// <summary>
+        /// Creates a builder for metadata tables and heaps.
+        /// </summary>
+        /// <param name="userStringHeapStartOffset">
+        /// Start offset of the User String heap.
+        /// The cumulative size of User String heaps of all previous EnC generations. Should be 0 unless the metadata is EnC delta metadata.
+        /// </param>
+        /// <param name="stringHeapStartOffset">
+        /// Start offset of the String heap.
+        /// The cumulative size of String heaps of all previous EnC generations. Should be 0 unless the metadata is EnC delta metadata.
+        /// </param>
+        /// <param name="blobHeapStartOffset">
+        /// Start offset of the Blob heap.
+        /// The cumulative size of Blob heaps of all previous EnC generations. Should be 0 unless the metadata is EnC delta metadata.
+        /// </param>
+        /// <param name="guidHeapStartOffset">
+        /// Start offset of the Guid heap.
+        /// The cumulative size of Guid heaps of all previous EnC generations. Should be 0 unless the metadata is EnC delta metadata.
+        /// </param>
+        /// <param name="createBlobBuilderFunc">
+        /// Later
+        /// </param>
+        /// <exception cref="ImageFormatLimitationException">Offset is too big.</exception>
+        /// <exception cref="ArgumentOutOfRangeException">Offset is negative.</exception>
+        /// <exception cref="ArgumentException"><paramref name="guidHeapStartOffset"/> is not a multiple of size of GUID.</exception>
+        public MetadataBuilder(
+            int userStringHeapStartOffset = 0,
+            int stringHeapStartOffset = 0,
+            int blobHeapStartOffset = 0,
+            int guidHeapStartOffset = 0,
+            Func<int, BlobBuilder>? createBlobBuilderFunc = null)
         {
             // -1 for the 0 we always write at the beginning of the heap:
             if (userStringHeapStartOffset >= UserStringHeapSizeLimit - 1)
@@ -108,6 +126,10 @@ namespace System.Reflection.Metadata.Ecma335
             {
                 throw new ArgumentException(SR.Format(SR.ValueMustBeMultiple, BlobUtilities.SizeOfGuid), nameof(guidHeapStartOffset));
             }
+
+            _createBlobBuilderFunc  ??= BlobBuilder (int minimumSize) => new BlobBuilder(minimumSize);
+            _userStringBuilder = _createBlobBuilderFunc(4 * 1024);
+            _guidBuilder = _createBlobBuilderFunc(16);
 
             // Add zero-th entry to all heaps, even in EnC delta.
             // We don't want generation-relative handles to ever be IsNil.

@@ -76,6 +76,31 @@ namespace System.Reflection.Metadata
 
         protected virtual void BeforeSwapCore(BlobBuilder other) { }
 
+        public void SetCapacity(int capacity)
+        {
+            if (!IsHead)
+            {
+                Throw.InvalidOperationBuilderAlreadyLinked();
+            }
+
+            if (capacity < Length)
+            {
+                Throw.InvalidOperation("The capacity must be greater than or equal to the current length.");
+            }
+
+            SetCapacityCore(capacity);
+        }
+
+        public virtual void SetCapacityCore(int capacity)
+        {
+            var oldBuffer = _buffer;
+            var oldLength = Length;;
+
+            _buffer = new byte[(Math.Max(MinChunkSize, capacity))];
+            _length = 0;
+            WriteBytes(oldBuffer.AsSpan(0, oldLength));
+        }
+
         private static void BeforeSwap(BlobBuilder left, BlobBuilder right)
         {
             left.BeforeSwapCore(right);

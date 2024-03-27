@@ -52,6 +52,27 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacity(System.Int32)</Target>
+    <Left>lib/net462/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net462/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacityCore(System.Int32)</Target>
+    <Left>lib/net462/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net462/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.Ecma335.MetadataBuilder.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Func{System.Int32,System.Reflection.Metadata.BlobBuilder})</Target>
+    <Left>lib/net462/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net462/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.PortableExecutable.DebugDirectoryBuilder.#ctor(System.Reflection.Metadata.BlobBuilder)</Target>
     <Left>lib/net462/System.Reflection.Metadata.dll</Left>
     <Right>lib/net462/System.Reflection.Metadata.dll</Right>
@@ -115,6 +136,27 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacity(System.Int32)</Target>
+    <Left>lib/net6.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacityCore(System.Int32)</Target>
+    <Left>lib/net6.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.Ecma335.MetadataBuilder.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Func{System.Int32,System.Reflection.Metadata.BlobBuilder})</Target>
+    <Left>lib/net6.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.PortableExecutable.DebugDirectoryBuilder.#ctor(System.Reflection.Metadata.BlobBuilder)</Target>
     <Left>lib/net6.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
@@ -178,6 +220,27 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacity(System.Int32)</Target>
+    <Left>lib/net7.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacityCore(System.Int32)</Target>
+    <Left>lib/net7.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.Ecma335.MetadataBuilder.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Func{System.Int32,System.Reflection.Metadata.BlobBuilder})</Target>
+    <Left>lib/net7.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.PortableExecutable.DebugDirectoryBuilder.#ctor(System.Reflection.Metadata.BlobBuilder)</Target>
     <Left>lib/net7.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
@@ -241,6 +304,27 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacity(System.Int32)</Target>
+    <Left>lib/net8.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacityCore(System.Int32)</Target>
+    <Left>lib/net8.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.Ecma335.MetadataBuilder.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Func{System.Int32,System.Reflection.Metadata.BlobBuilder})</Target>
+    <Left>lib/net8.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.PortableExecutable.DebugDirectoryBuilder.#ctor(System.Reflection.Metadata.BlobBuilder)</Target>
     <Left>lib/net8.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
@@ -304,6 +388,27 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacity(System.Int32)</Target>
+    <Left>lib/netstandard2.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacityCore(System.Int32)</Target>
+    <Left>lib/netstandard2.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.Ecma335.MetadataBuilder.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Func{System.Int32,System.Reflection.Metadata.BlobBuilder})</Target>
+    <Left>lib/netstandard2.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.PortableExecutable.DebugDirectoryBuilder.#ctor(System.Reflection.Metadata.BlobBuilder)</Target>
     <Left>lib/netstandard2.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
@@ -360,6 +465,24 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacity(System.Int32)</Target>
+    <Left>ref/net462/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net462/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacityCore(System.Int32)</Target>
+    <Left>ref/net462/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net462/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.Ecma335.MetadataBuilder.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Func{System.Int32,System.Reflection.Metadata.BlobBuilder})</Target>
+    <Left>ref/net462/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net462/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.PortableExecutable.DebugDirectoryBuilder.#ctor(System.Reflection.Metadata.BlobBuilder)</Target>
     <Left>ref/net462/System.Reflection.Metadata.dll</Left>
     <Right>lib/net462/System.Reflection.Metadata.dll</Right>
@@ -414,6 +537,24 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacity(System.Int32)</Target>
+    <Left>ref/net6.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacityCore(System.Int32)</Target>
+    <Left>ref/net6.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.Ecma335.MetadataBuilder.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Func{System.Int32,System.Reflection.Metadata.BlobBuilder})</Target>
+    <Left>ref/net6.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.PortableExecutable.DebugDirectoryBuilder.#ctor(System.Reflection.Metadata.BlobBuilder)</Target>
     <Left>ref/net6.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
@@ -468,6 +609,24 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacity(System.Int32)</Target>
+    <Left>ref/net7.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacityCore(System.Int32)</Target>
+    <Left>ref/net7.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.Ecma335.MetadataBuilder.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Func{System.Int32,System.Reflection.Metadata.BlobBuilder})</Target>
+    <Left>ref/net7.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.PortableExecutable.DebugDirectoryBuilder.#ctor(System.Reflection.Metadata.BlobBuilder)</Target>
     <Left>ref/net7.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
@@ -522,6 +681,24 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacity(System.Int32)</Target>
+    <Left>ref/net8.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacityCore(System.Int32)</Target>
+    <Left>ref/net8.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.Ecma335.MetadataBuilder.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Func{System.Int32,System.Reflection.Metadata.BlobBuilder})</Target>
+    <Left>ref/net8.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.PortableExecutable.DebugDirectoryBuilder.#ctor(System.Reflection.Metadata.BlobBuilder)</Target>
     <Left>ref/net8.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
@@ -571,6 +748,24 @@
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkThisToOther(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
+    <Left>ref/netstandard2.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacity(System.Int32)</Target>
+    <Left>ref/netstandard2.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.SetCapacityCore(System.Int32)</Target>
+    <Left>ref/netstandard2.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.Ecma335.MetadataBuilder.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Func{System.Int32,System.Reflection.Metadata.BlobBuilder})</Target>
     <Left>ref/netstandard2.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
   </Suppression>
