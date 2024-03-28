@@ -31,6 +31,20 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_Buffer</Target>
+    <Left>lib/net462/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net462/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_MaxChunkSize</Target>
+    <Left>lib/net462/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net462/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkCore(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
     <Left>lib/net462/System.Reflection.Metadata.dll</Left>
     <Right>lib/net462/System.Reflection.Metadata.dll</Right>
@@ -46,6 +60,13 @@
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkThisToOther(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
+    <Left>lib/net462/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net462/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.set_Buffer(System.Byte[])</Target>
     <Left>lib/net462/System.Reflection.Metadata.dll</Left>
     <Right>lib/net462/System.Reflection.Metadata.dll</Right>
     <IsBaselineSuppression>true</IsBaselineSuppression>
@@ -115,6 +136,20 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_Buffer</Target>
+    <Left>lib/net6.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_MaxChunkSize</Target>
+    <Left>lib/net6.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkCore(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
     <Left>lib/net6.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
@@ -130,6 +165,13 @@
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkThisToOther(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
+    <Left>lib/net6.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.set_Buffer(System.Byte[])</Target>
     <Left>lib/net6.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
     <IsBaselineSuppression>true</IsBaselineSuppression>
@@ -199,6 +241,20 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_Buffer</Target>
+    <Left>lib/net7.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_MaxChunkSize</Target>
+    <Left>lib/net7.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkCore(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
     <Left>lib/net7.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
@@ -214,6 +270,13 @@
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkThisToOther(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
+    <Left>lib/net7.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.set_Buffer(System.Byte[])</Target>
     <Left>lib/net7.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
     <IsBaselineSuppression>true</IsBaselineSuppression>
@@ -283,6 +346,20 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_Buffer</Target>
+    <Left>lib/net8.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_MaxChunkSize</Target>
+    <Left>lib/net8.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkCore(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
     <Left>lib/net8.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
@@ -298,6 +375,13 @@
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkThisToOther(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
+    <Left>lib/net8.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.set_Buffer(System.Byte[])</Target>
     <Left>lib/net8.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
     <IsBaselineSuppression>true</IsBaselineSuppression>
@@ -367,6 +451,20 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_Buffer</Target>
+    <Left>lib/netstandard2.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_MaxChunkSize</Target>
+    <Left>lib/netstandard2.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkCore(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
     <Left>lib/netstandard2.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
@@ -382,6 +480,13 @@
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkThisToOther(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
+    <Left>lib/netstandard2.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
+    <IsBaselineSuppression>true</IsBaselineSuppression>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.set_Buffer(System.Byte[])</Target>
     <Left>lib/netstandard2.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
     <IsBaselineSuppression>true</IsBaselineSuppression>
@@ -447,6 +552,18 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_Buffer</Target>
+    <Left>ref/net462/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net462/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_MaxChunkSize</Target>
+    <Left>ref/net462/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net462/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkCore(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
     <Left>ref/net462/System.Reflection.Metadata.dll</Left>
     <Right>lib/net462/System.Reflection.Metadata.dll</Right>
@@ -460,6 +577,12 @@
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkThisToOther(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
+    <Left>ref/net462/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net462/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.set_Buffer(System.Byte[])</Target>
     <Left>ref/net462/System.Reflection.Metadata.dll</Left>
     <Right>lib/net462/System.Reflection.Metadata.dll</Right>
   </Suppression>
@@ -519,6 +642,18 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_Buffer</Target>
+    <Left>ref/net6.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_MaxChunkSize</Target>
+    <Left>ref/net6.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkCore(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
     <Left>ref/net6.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
@@ -532,6 +667,12 @@
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkThisToOther(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
+    <Left>ref/net6.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.set_Buffer(System.Byte[])</Target>
     <Left>ref/net6.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net6.0/System.Reflection.Metadata.dll</Right>
   </Suppression>
@@ -591,6 +732,18 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_Buffer</Target>
+    <Left>ref/net7.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_MaxChunkSize</Target>
+    <Left>ref/net7.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkCore(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
     <Left>ref/net7.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
@@ -604,6 +757,12 @@
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkThisToOther(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
+    <Left>ref/net7.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.set_Buffer(System.Byte[])</Target>
     <Left>ref/net7.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net7.0/System.Reflection.Metadata.dll</Right>
   </Suppression>
@@ -663,6 +822,18 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_Buffer</Target>
+    <Left>ref/net8.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_MaxChunkSize</Target>
+    <Left>ref/net8.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkCore(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
     <Left>ref/net8.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
@@ -676,6 +847,12 @@
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkThisToOther(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
+    <Left>ref/net8.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.set_Buffer(System.Byte[])</Target>
     <Left>ref/net8.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/net8.0/System.Reflection.Metadata.dll</Right>
   </Suppression>
@@ -735,6 +912,18 @@
   </Suppression>
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_Buffer</Target>
+    <Left>ref/netstandard2.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.get_MaxChunkSize</Target>
+    <Left>ref/netstandard2.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkCore(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
     <Left>ref/netstandard2.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
@@ -748,6 +937,12 @@
   <Suppression>
     <DiagnosticId>CP0002</DiagnosticId>
     <Target>M:System.Reflection.Metadata.BlobBuilder.LinkThisToOther(System.Reflection.Metadata.BlobBuilder,System.Boolean)</Target>
+    <Left>ref/netstandard2.0/System.Reflection.Metadata.dll</Left>
+    <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
+  </Suppression>
+  <Suppression>
+    <DiagnosticId>CP0002</DiagnosticId>
+    <Target>M:System.Reflection.Metadata.BlobBuilder.set_Buffer(System.Byte[])</Target>
     <Left>ref/netstandard2.0/System.Reflection.Metadata.dll</Left>
     <Right>lib/netstandard2.0/System.Reflection.Metadata.dll</Right>
   </Suppression>

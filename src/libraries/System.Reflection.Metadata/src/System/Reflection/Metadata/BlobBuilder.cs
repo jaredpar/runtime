@@ -39,7 +39,7 @@ namespace System.Reflection.Metadata
         // and the current length of the buffer (not that the buffers are swapped when suffix linking).
         private int _previousLengthOrFrozenSuffixLengthDelta;
 
-        protected byte[] _buffer;
+        private byte[] _buffer;
 
         // The length of data in the buffer in lower 31 bits.
         // Head: highest bit is 0, length may be 0.
@@ -51,6 +51,25 @@ namespace System.Reflection.Metadata
         private int Length => (int)(_length & ~IsFrozenMask);
         private uint FrozenLength => _length | IsFrozenMask;
         private Span<byte> Span => _buffer.AsSpan(0, Length);
+        protected byte[] Buffer
+        {
+            get
+            {
+                return _buffer;
+            }
+            set
+            {
+                if (!IsHead)
+                {
+                    Throw.InvalidOperationBuilderAlreadyLinked();
+                }
+
+                _buffer = value;
+                _length = 0;
+            }
+        }
+
+        protected virtual int? MaxChunkSize => null;
 
         public BlobBuilder(int capacity = DefaultChunkSize)
         {
@@ -727,10 +746,15 @@ namespace System.Reflection.Metadata
             ReadOnlySpan<byte> remaining = buffer.Slice(bytesToCurrent);
             if (!remaining.IsEmpty)
             {
-                Expand(remaining.Length);
-
-                remaining.CopyTo(_buffer);
-                AddLength(remaining.Length);
+                var max = MaxChunkSize ?? int.MaxValue;
+                while (!remaining.IsEmpty)
+                {
+                    var chunkSize = Math.Min(remaining.Length, max);
+                    Expand(chunkSize);
+                    remaining.Slice(0, chunkSize).CopyTo(_buffer);
+                    AddLength(chunkSize);
+                    remaining = remaining.Slice(chunkSize);
+                }
             }
         }
 

@@ -127,7 +127,7 @@ namespace System.Reflection.Metadata.Ecma335
                 throw new ArgumentException(SR.Format(SR.ValueMustBeMultiple, BlobUtilities.SizeOfGuid), nameof(guidHeapStartOffset));
             }
 
-            _createBlobBuilderFunc  ??= BlobBuilder (int minimumSize) => new BlobBuilder(minimumSize);
+            _createBlobBuilderFunc = createBlobBuilderFunc ?? (BlobBuilder (int minimumSize) => new BlobBuilder(minimumSize));
             _userStringBuilder = _createBlobBuilderFunc(4 * 1024);
             _guidBuilder = _createBlobBuilderFunc(16);
 
